@@ -25,7 +25,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "getSandBoxKey")
 	@ResponseBody
 	public HttpResult<Object> getSandBoxKey(HttpServletRequest request, HttpServletResponse response) {
-
 		return super.unifyPayController(request, response);
 	}
 
@@ -35,7 +34,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "unifiedOrder")
 	@ResponseBody
 	public HttpResult<Object> unifiedOrder(HttpServletRequest request, HttpServletResponse response) {
-
 		return super.unifyPayController(request, response);
 	}
 
@@ -45,7 +43,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "recvPayNotification")
 	@ResponseBody
 	public HttpResult<Object> recvPayNotification(HttpServletRequest request, HttpServletResponse response) {
-
 		return super.unifyPayController(request, response);
 	}
 	
@@ -55,7 +52,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "queryOrder")
 	@ResponseBody
 	public HttpResult<Object> queryOrder(HttpServletRequest request, HttpServletResponse response) {
-		
 		return super.unifyPayController(request, response);
 	}
 	
@@ -65,7 +61,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "closeOrder")
 	@ResponseBody
 	public HttpResult<Object> closeOrder(HttpServletRequest request, HttpServletResponse response) {
-		
 		return super.unifyPayController(request, response);
 	}
 	
@@ -75,7 +70,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "refund")
 	@ResponseBody
 	public HttpResult<Object> refund(HttpServletRequest request, HttpServletResponse response) {
-		
 		return super.unifyPayController(request, response);
 	}
 	
@@ -85,7 +79,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "queryRefund")
 	@ResponseBody
 	public HttpResult<Object> queryRefund(HttpServletRequest request, HttpServletResponse response) {
-		
 		return super.unifyPayController(request, response);
 	}
 	
@@ -95,7 +88,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "downloadBill")
 	@ResponseBody
 	public HttpResult<Object> downloadBill(HttpServletRequest request, HttpServletResponse response) {
-		
 		return super.unifyPayController(request, response);
 	}
 	
@@ -105,7 +97,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "report")
 	@ResponseBody
 	public HttpResult<Object> report(HttpServletRequest request, HttpServletResponse response) {
-		
 		return super.unifyPayController(request, response);
 	}
 	
@@ -115,7 +106,6 @@ public class PayController extends BaseController {
 	@PostMapping(value = "getCommentData")
 	@ResponseBody
 	public HttpResult<Object> getCommentData(HttpServletRequest request, HttpServletResponse response) {
-		
 		return super.unifyPayController(request, response);
 	}
 
