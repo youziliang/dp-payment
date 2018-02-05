@@ -18,7 +18,7 @@ import com.dp.persistence.dto.base.HttpResult;
 @Controller
 @RequestMapping("api/weiPay") // produces = "application/x-www-form-urlencoded; charset=UTF-8" 此参为可接收的报文格式
 public class PayController extends BaseController {
-
+	
 	/**
 	 * @Description: 获取沙箱环境SignKey
 	 */

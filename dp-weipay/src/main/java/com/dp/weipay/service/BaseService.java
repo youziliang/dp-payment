@@ -33,7 +33,7 @@ public class BaseService {
 		String uKey = Thread.currentThread().getName();
 		log.info("通过本地线程类获取的URL的KEY为: {}", uKey);
 		String URL = PropertyUtil.getProperty(uKey, "");
-
+		
 		Map<String, Object> resultMap = null;
 		try {
 			resultMap = HttpUtil.weiPayReq(URL, request, headers);

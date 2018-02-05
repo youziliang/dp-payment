@@ -279,11 +279,11 @@ public class HttpUtil {
 	 * @Description 获取HttpRequest对象
 	 */
 	@SuppressWarnings({ "unchecked" })
-	private static HttpRequestBase getHttpRequest(String url, String method) {
+	private static HttpRequestBase getHttpRequest(String url, String methodType) {
 		HttpRequestBase httpRequest = null;
-		method = "org.apache.http.client.methods.Http" + method;
+		methodType = "org.apache.http.client.methods.Http" + methodType;
 		try {
-			Class<HttpRequestBase> httpRequestClass = (Class<HttpRequestBase>) Class.forName(method);
+			Class<HttpRequestBase> httpRequestClass = (Class<HttpRequestBase>) Class.forName(methodType);
 			httpRequest = httpRequestClass.newInstance();
 			httpRequest.setURI(URI.create(url));
 		} catch (Exception e) {
@@ -335,7 +335,9 @@ public class HttpUtil {
 			throws Exception {
 		Map<String, Object> params = FormatUtil.req2Map(request);
 		params.put("sign", SignUtil.getWeiSign(params, PropertyUtil.getProperty("APPSECRET", ""), CharSets.UTF8));
-		String response = request(URL, HttpUtil.POST, params, headers, true);
+		String methodType = FormatUtil.strMatchRegex(request.getMethod(), "Abcd");
+		log.info("methodType: {}", methodType);
+		String response = request(URL, methodType, params, headers, true);
 		return FormatUtil.xml2Map(response);
 	}
 

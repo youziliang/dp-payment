@@ -128,4 +128,25 @@ public class FormatUtil {
 		return map;
 	}
 
+	/**
+	 * @Description String match RegEx
+	 */
+	public static String strMatchRegex(String str, String pattern) {
+
+		if (str.length() != pattern.length()) {
+			return null;
+		}
+		char[] patternArray = pattern.toCharArray();
+		char[] strArray = str.toCharArray();
+		for (int i = 0; i < patternArray.length; i++) {
+			if (Character.isUpperCase(patternArray[i])) {
+				strArray[i] = Character.toUpperCase(strArray[i]);
+			} else {
+				strArray[i] = Character.toLowerCase(strArray[i]);
+			}
+		}
+		String result = new String(strArray);
+		return result;
+	}
+
 }
