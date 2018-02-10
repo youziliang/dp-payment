@@ -13,24 +13,18 @@
 	<!-- Spring 注解配置 -->
 	<context:annotation-config />
 
-	<!--扫描注解 -->
-	<context:component-scan base-package="com.dp.alipay.*">
-		<context:exclude-filter type="annotation"
-			expression="org.springframework.stereotype.Controller" />
-	</context:component-scan>
+	<!-- 扫描包Service实现类 -->
+	<context:component-scan base-package="com.dp.alipay.*" />
 
-	<!-- springMVC 注解配置 -->
-	<mvc:annotation-driven />
-
-	<bean
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<bean id="propertyConfigurer" class="com.dp.common.utils.PropertyUtil">
+		<property name="order" value="1" />
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
 		<property name="locations">
-			<array>
-				<!-- <value>classpath*:jdbc.properties</value> -->
-			</array>
+			<list>
+				<!-- <value>classpath*:env.properties</value> -->
+			</list>
 		</property>
 	</bean>
 
-	<!-- <import resource="classpath*:spring/datasource-config.xml" /> -->
-	<!-- <import resource="classpath*:spring/dubbo-consumer.xml" /> -->
 </beans>
+

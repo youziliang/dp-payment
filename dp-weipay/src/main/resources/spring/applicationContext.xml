@@ -22,11 +22,8 @@
 		<property name="locations">
 			<list>
 				<value>classpath*:env.properties</value>
-				<!-- <value>classpath*:jdbc.properties</value> -->
 			</list>
 		</property>
 	</bean>
 
-	<!-- <import resource="classpath*:spring/datasource-config.xml" /> -->
-	<!-- <import resource="classpath*:spring/dubbo-consumer.xml" /> -->
 </beans>
